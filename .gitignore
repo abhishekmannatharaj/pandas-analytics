@@ -1,0 +1,18 @@
+# Python environment & caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+
+# Protect raw and processed datasets from being committed
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
