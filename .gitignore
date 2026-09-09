@@ -1,18 +1,75 @@
-# Python environment & caches
+# --- Virtual Environments ---
 .venv/
 venv/
+env/
+ENV/
+
+# --- Environment Variables & Secrets ---
+.env
+.env.*
+*.pem
+*.key
+
+# --- Python Bytecode & Compilations ---
 __pycache__/
 *.py[cod]
-.pytest_cache/
-.ipynb_checkpoints/
-.env
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Protect raw and processed datasets from being committed
+# --- Jupyter Notebook Artifacts ---
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+.virtual_documents/
+
+# --- Datasets & Data Folder ---
+# Ignore everything inside data/raw and data/processed, but keep the folders via .gitkeep
 data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
 
-# IDE files
+# Catch standalone dataset files placed outside data/
+*.csv
+*.xlsx
+*.xls
+*.tsv
+*.parquet
+*.h5
+*.feather
+*.zip
+*.tar.gz
+
+# --- Testing, Coverage & Linters ---
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# --- IDE & Editor Specifics ---
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# --- Operating System Artifacts ---
+.DS_Store
+Thumbs.db
+desktop.ini
