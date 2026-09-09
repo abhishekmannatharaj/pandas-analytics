@@ -30,11 +30,15 @@ A modular backend API built with **FastAPI** and **Pandas** designed for sheet u
 ```text
 pandas-analytics/
 ├── app/
-│   ├── api/v1/          # Endpoints and schemas
-│   ├── services/        # Pure Pandas analysis logic
-│   └── main.py          # FastAPI application entrypoint
+│   ├── api/v1/          # Handles HTTP traffic, request parsing, and Pydantic validation
+│   ├── core/            # Global app configurations and environment settings
+│   ├── services/        # Pure analytical operations (Pandas parsing, filtering, EDA)
+│   └── main.py          # Application instance bootstrap and router inclusion
 ├── data/
-│   ├── raw/             # Source CSV/Excel files (git-ignored)
+│   ├── raw/             # Local testing files (kept out of Git via .gitignore)
 │   └── processed/       # Cleaned exports
-├── requirements.txt
-└── README.md
+├── notebooks/           # Exploratory work (eda.ipynb)
+├── tests/               # Automated unit tests
+├── .gitignore           # Prevents uploading datasets, .env, and caches
+├── requirements.txt     # Locked production dependencies
+└── README.md            # Architecture & execution guide
