@@ -1,9 +1,15 @@
-# Pandas Data Analytics Microservice
+# run
+ 1. Create the virtual environment using uv
+    uv venv
+ 2. Activate the virtual environment
+   .venv\Scripts\activate
+ 3. uv pip install -r requirements.txt
+ 4. python -m streamlit run streamlit_app.py or uv run streamlit run streamlit_app.py
 
+# Pandas Data Analytics Microservice
 A modular backend API built with **FastAPI** and **Pandas** designed for sheet uploads (CSV/Excel), automated exploratory data analysis, and filtered query reporting.
 
 ## cheat sheet
-# Pandas Production Cheat Sheet
 
 | Task | Pandas Code Snippet | What It Does |
 | :--- | :--- | :--- |
